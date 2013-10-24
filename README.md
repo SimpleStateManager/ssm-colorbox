@@ -10,11 +10,11 @@ To get started with ssm-colorbox you will need the following dependencies:
 With these already downloaded you are ready to download ssm-colorbox.
 
 ##Documentation
-Documentation can be found at http://www.simplestatemanager.com
+Documentation can be found at http://colorbox.simplestatemanager.com
 
 ##Release Log
 
-###1.0.0 - Jun 22, 2013
+###1.0.0 - Oct 24, 2013
 * Initial release
 
 ## License
