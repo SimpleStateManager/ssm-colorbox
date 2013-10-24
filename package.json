@@ -1,0 +1,38 @@
+{
+  "name": "SSM-Colorbox",
+  "description": "SSM with Colorbox is a simple wrapper for jQuery Colorbox that allows it to be toggled on and off using SSM",
+  "version": "1.0.0",
+  "main": "src/ssm-colorbox.js",
+  "scripts": {
+    "test": "grunt travis --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SimpleStateManager/ssm-colorbox.git"
+  },
+  "keywords": [
+    "Responsive",
+    "State",
+    "Resize",
+    "Colorbox",
+    "jQuery",
+    "Plugin",
+    "Lighbox"
+  ],
+  "author": "Jonathan Fielding",
+  "contributors": [
+    {
+      "name": "Jonathan Fielding",
+      "url": "http://www.jonathanfielding.com"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-qunit": "~0.2.2",
+    "grunt-contrib-watch": "~0.5.2",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-cli": "~0.1.6",
+    "grunt-contrib-compass": "~0.5.0"
+  }
+}

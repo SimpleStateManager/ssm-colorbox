@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SSM with Colorbox - Responsive implementation of colorbox</title>
+
+        <link rel="stylesheet" href="docs/bower_components/jquery-colorbox/example1/colorbox.css">
+        <link rel="stylesheet" href="docs/css/styles.css">
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <script src="docs/bower_components/modernizr/modernizr.js"></script>
+        <script src="docs/bower_components/respond/respond.min.js"></script>
+
+    </head>
+    <body data-spy="scroll" data-target=".navbar" id="home">
+        <a class="github-ribbon visible-desktop" href="https://github.com/SimpleStateManager/SimpleStateManager">
+            <img style="position: fixed; top: 0; right: 0; border: 0; z-index: 9999;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub">
+        </a>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#home">SSM with Colorbox</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active">
+                <a href="#home">Home</a>
+              </li>
+              <li class="">
+                <a href="#getstarted">Get started</a>
+              </li>
+              <li class="">
+                <a href="#api">API</a>
+              </li>
+              <li class="">
+                <a href="#log">Release Log</a>
+              </li>
+              <li class="">
+                <a href="#licence">Licence</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+            <header id="hero">
+                <div class="container">
+                    <img src="docs/images/ssm-logo.png" class="logo">
+
+                    <h1>SSM with Colorbox</h1>
+
+                    <p class="lead">SSM with Colorbox is a wrapper for the Colorbox jQuery plugin which allows you to enable and disable colorbox based on your current active state</p>
+                    <a class="btn btn-large btn-primary" href="https://github.com/jonathan-fielding/SimpleStateManager/archive/master.zip">Download</a>
+                    <a class="btn btn-large btn-primary the_lightbox" href="docs/images/ssm-logo.png">Example</a>
+                </div>
+            </header>
+            <section id="intro">
+                <div class="container">
+                    <p>SSM with Colorbox brings together one of the best lightbox plugins with SimpleStateManager allowing you to enable and disable the lightbox based on the responsive state of the browser.</p>
+
+                    <h2>Why should I use SSM with Colorbox?</h2>
+
+                    <ul>
+                        <li>You want to use lightboxes on desktop without providing a poor experience to mobile users</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="getstarted">
+                <div class="container">
+                    <h2>Get started</h2>
+                    <p>To get started with ssm-colorbox you need to ensure you have the relevant dependancies</p>
+                    <ul>
+                        <li>jQuery</li>
+                        <li>Colorbox</li>
+                        <li>SimpleStateManager</li>
+                    </ul>
+                    <p>With the dependancies in place you can now add SSM with Colorbox to your project.</p>
+                    <ul>
+                        <li>Download and add the ssm-colorbox.js (or ssm-colorbox.js) file to your site</li>
+                        <li>Use Bower to add to your project using <code>bower install ssm-colorbox</code></li>
+                    </ul>
+                </div>
+            </section>
+            <section id="api">
+                <div class="container">
+                    <h2>API</h2>
+                    <p>Using SSM with Colorbox is as simple as adding an extra value to your states to tell colorbox whether it should activate or not.</p>
+                    
+                    <pre>ssm.addState({
+    id: 'mobile',
+    maxWidth: 767,
+    colorbox: false
+});
+
+ssm.addState({
+    id: 'tablet',
+    minWidth: 768,
+    maxWidth: 1023,
+    colorbox: true
+});
+
+ssm.addState({
+    id: 'desktop',
+    minWidth: 1024,
+    colorbox: true
+});
+
+ssm.ready();</pre>
+                    <p>With this in place you are free to activate colorbox as you normally would passing the same options which can be found in the colorbox documentation</p>
+                    <pre>$('.the_lightbox').colorbox();</pre>
+                </div>
+            </section>
+            <section id="browsers">
+                <div class="container">
+                    <h2>Browser Support</h2>
+                    <p>There are a number of browsers that we have tested support, as we test more browsers we will update this list</p>
+                    <ul>
+                        <li>Chrome</li>
+                        <li>Firefox</li>
+                        <li>Internet Explorer 7+</li>
+                        <li>Safari</li>
+                        <li>Opera</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="log">
+                <div class="container">
+                    <h2>Release Log</h2>
+                    <h3>1.0.0 - October 24, 2013</h3>
+                    <ul>
+                        <li>Initial release</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="contribute">
+                <div class="container">
+                    <h2>Contribute</h2>
+                    <p>Anybody is welcome to contribute to this project, this is a community led library and you can get involved in the following ways</p>
+
+                    <ul>
+                        <li>Create Issues for bugs or new feature requests</li>
+                        <li>Fix any issues you have found and create a pull request</li>
+                    </ul>
+
+                    <h3>Contributors</h3>
+                    <ul>
+                        <li><a href="http://www.jonathanfielding.com">Jonathan Fielding</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section id="licence">
+                <div class="container">
+                    <h2>Licence</h2>
+                    <p>License: MIT (<a href="http://www.opensource.org/licenses/mit-license.php">http://www.opensource.org/licenses/mit-license.php</a>)</p>
+                    <p>The MIT License (MIT)</p>
+                    <p>Copyright (c) 2013 Jonathan Fielding</p>
+                    <p>Permission is hereby granted, free of charge, to any person obtaining a copy
+                    of this software and associated documentation files (the "Software"), to deal
+                    in the Software without restriction, including without limitation the rights
+                    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                    copies of the Software, and to permit persons to whom the Software is
+                    furnished to do so, subject to the following conditions:</p>
+                    <p>The above copyright notice and this permission notice shall be included in
+                    all copies or substantial portions of the Software.</p>
+                    <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+                    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+                    THE SOFTWARE.</p>
+
+                </div>
+            </section>
+            <footer>
+                <div class="container">
+                    <p>Simple State Manager is an Open Source Project licenced under the MIT licence</p>
+                </div>
+            </footer>
+
+        <script src="docs/bower_components/SimpleStateManager/dist/ssm.min.js"></script>
+        <script src="docs/bower_components/jquery/jquery.min.js"></script>
+        <script src="docs/bower_components/jquery-colorbox/jquery.colorbox.js"></script>
+        <script src="src/ssm-colorbox.js"></script>
+
+        <script src="docs/bower_components/sass-bootstrap/js/bootstrap-scrollspy.js"></script>
+        <script src="docs/bower_components/sass-bootstrap/js/bootstrap-collapse.js"></script>
+        <script src="docs/js/script.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-42981349-1', 'simplestatemanager.com');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>

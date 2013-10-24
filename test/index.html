@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>QUnit Example</title>
+        <link rel="stylesheet" href="resources/qunit.css">
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+
+        <script src="resources/qunit.js"></script>
+        <script src="../docs/bower_components/SimpleStateManager/dist/ssm.min.js"></script>
+        <script src="../docs/bower_components/jquery/jquery.min.js"></script>
+        <script src="../docs/bower_components/jquery-colorbox/jquery.colorbox.js"></script>
+        <script src="../src/ssm-colorbox.js"></script>
+        <script>
+            test("namespace hijacking", function() {
+                ok(typeof $.fn['colorboxReference'] === "function", "Passed");
+            });
+        </script>
+    </body>
+</html>
