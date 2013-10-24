@@ -24,7 +24,8 @@
         showLightbox: function(e){
             var $this = $(e.target),
                 $instance = $this.data("plugin_" + pluginName),
-                settings = {'href': $this.attr('href')},
+                href = $this.attr('href'),
+                settings = {'href': href},
                 currentStates = ssm.getCurrentStates(),
                 noCurrentStates = currentStates.length,
                 showColorbox = true;
@@ -37,7 +38,11 @@
             };
 
             if(showColorbox){
-                settings = $.extend({}, $instance.options, settings);
+                settings = $.extend({}, settings, $instance.options);
+
+                if(typeof settings.href === "function"){
+                    settings.href = $.proxy(settings.href, $instance.element);
+                }
 
                 $.colorbox(settings);
                 e.preventDefault();
