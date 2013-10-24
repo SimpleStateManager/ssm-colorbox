@@ -24,9 +24,5 @@
 
     ssm.ready();
 
-    $('.the_lightbox').colorbox({
-        href: function(){
-            return $(this).attr('href') + " #intro";
-        }
-    });
+    $('.the_lightbox').colorbox();
 }());
