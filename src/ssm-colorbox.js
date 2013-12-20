@@ -21,8 +21,8 @@
     };
 
     var privateMethods = {
-        showLightbox: function(e){
-            var $this = $(e.target),
+        showLightbox: function(){
+            var $this = $(this),
                 $instance = $this.data("plugin_" + pluginName),
                 href = $this.attr('href'),
                 settings = {'href': href},
