@@ -45,8 +45,11 @@
                 }
 
                 $.colorbox(settings);
-                e.preventDefault();
+
+                return false;
             }
+
+            return true;
         }
     }
 
